@@ -6,17 +6,15 @@ import org.bencode.types.DictionaryType;
 import org.bencode.types.IntegerValue;
 import org.bencode.types.ListType;
 
-
-
 public class Runner {
 	
 	public static void main(String[] args) throws OperationNotSupportedException {
 		
 		// inner dictionaries
 		DictionaryType dict0 = Bencode.createDictionary();
-		Bencode.putValueToDictionary(dict0, "yandex", new IntegerValue(77));
+		Bencode.putValueToDictionary(dict0, "map-key", new IntegerValue(77));
 		DictionaryType dict = Bencode.createDictionary();
-		Bencode.putValueToDictionary(dict, "test", dict0);
+		Bencode.putValueToDictionary(dict, "test-value", dict0);
 
 		Bencode.addDictionaryType(dict);
 
@@ -32,10 +30,10 @@ public class Runner {
 		
 		
 		ListType list1 = Bencode.createListType();
-		Bencode.addStringValue(list1,"yandex");
+		Bencode.addStringValue(list1,"list-first-inner");
 		
 		ListType list2 = Bencode.createListType();
-		Bencode.addStringValue(list2,"test task");
+		Bencode.addStringValue(list2,"list-second-inner");
 		
 		Bencode.addInnerListType(list1, list2);
 		

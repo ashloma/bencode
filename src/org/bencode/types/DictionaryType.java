@@ -9,7 +9,7 @@ import javax.naming.OperationNotSupportedException;
 /**
  * Dictionary type - contains pair key-value
  * Key must be only string type
- * Value can be integer, string and list
+ * Value can be integer, string, list and map
  * 
  * @author a.shloma
  *

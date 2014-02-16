@@ -21,7 +21,7 @@ public class Parser {
 	private static List<Value<?>> values = new LinkedList<>();
 	
 	/**
-	 * Deserialize into B-encode format
+	 * Deserialize byte array into B-encode format
 	 * @param data - byte array
 	 * @throws OperationNotSupportedException 
 	 */

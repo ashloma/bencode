@@ -11,7 +11,12 @@ import org.bencode.types.Parser;
 import org.bencode.types.StringValue;
 import org.bencode.types.Value;
 
-
+/**
+ * B-encode format serialize/deserialize util
+ * 
+ * @author a.shloma
+ *
+ */
 public class Bencode {
 
 	/**

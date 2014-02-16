@@ -14,7 +14,10 @@ import javax.naming.OperationNotSupportedException;
 public class ListType extends Value<LinkedList<Value<?>>> implements ComplexType {
 
 	private final LinkedList<Value<?>> listElements = new LinkedList<>();
-
+	
+	/**
+	 * Add simple type value to list type
+	 */
 	public void addValue(Value<?> val) throws OperationNotSupportedException {
 		if (val == null) {
 			throw new OperationNotSupportedException("Trying to add null");
@@ -22,6 +25,9 @@ public class ListType extends Value<LinkedList<Value<?>>> implements ComplexType
 		listElements.add(val);
 	}
 	
+	/**
+	 * Add complex type value to list type
+	 */
 	public void addComplexValue(ComplexType val) throws OperationNotSupportedException {
 		if (val == null) {
 			throw new OperationNotSupportedException("Trying to add null");
@@ -74,7 +80,6 @@ public class ListType extends Value<LinkedList<Value<?>>> implements ComplexType
 
 	@Override
 	protected LinkedList<Value<?>> getValue() {
-		
 		return listElements;
 	}
 
